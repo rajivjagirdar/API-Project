@@ -17,17 +17,28 @@
   <br>
   <div class="container-fluid">
     <nav>
-      <div>[SEARCHBAR MOVIE NAME]</div>
+      <div>
+        <form id="movie-form">
+        <label for="movie-input">Movie Search</label>
+        <input type="text" id="movie-input">
+        <br>
+      </div>
       <div>[SEARCH LOCATION]</div>
     </nav>
   </div>
   <br>
+ 
   <div class="container-fluid">
-      <div class="row">
-          <div class="col-sm-8">[THIS WILL CONTAIN SEARCH HISTORY]</div>
+      <div class="row"></div>
+      <div class="col-sm-8">[THIS WILL CONTAIN SEARCH HISTORY]</div>
+      <div class="row"></div>
           <div class="col-sm-4">[THIS WILL CONTAIN ALL RESPONSES FROM ALL 3 APIS]
               <p id="omdb">[oMDB DATA]</p>
+          </div>
+          <div class="col-sm-4">[THIS WILL CONTAIN ALL RESPONSES FROM ALL 3 APIS]
               <p id= "nyTimes">[NYTimes DATA]</p>
+          </div>
+          <div class="col-sm-4">[THIS WILL CONTAIN ALL RESPONSES FROM ALL 3 APIS]
               <p id= "fandango">[Fandango DATA] </p>  
           </div>
       </div>
