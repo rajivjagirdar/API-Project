@@ -19,11 +19,16 @@
     <nav>
       <div>
         <form id="movie-form">
-        <label for="movie-input">Movie Search</label>
+        <label for="movie-input"></label>
         <input type="text" id="movie-input">
+        <input id="add-movie" type="submit" value="Search Movie">
+
+        <form id="location-form">
+            <label for="location-input"></label>
+            <input type="text" id="location-input">
+            <input id="add-location" type="submit" value="Search Location">
         <br>
       </div>
-      <div>[SEARCH LOCATION]</div>
     </nav>
   </div>
   <br>
@@ -31,14 +36,15 @@
   <div class="container-fluid">
       <div class="row"></div>
       <div class="col-sm-8">[THIS WILL CONTAIN SEARCH HISTORY]</div>
+      <div class="container-fluid">
       <div class="row"></div>
-          <div class="col-sm-4">[THIS WILL CONTAIN ALL RESPONSES FROM ALL 3 APIS]
+          <div class="col-sm-4">[THIS WILL CONTAIN ALL RESPONSES FROM oMDB]
               <p id="omdb">[oMDB DATA]</p>
           </div>
-          <div class="col-sm-4">[THIS WILL CONTAIN ALL RESPONSES FROM ALL 3 APIS]
+          <div class="col-sm-4">[THIS WILL CONTAIN ALL RESPONSES FROM NYTimes]
               <p id= "nyTimes">[NYTimes DATA]</p>
           </div>
-          <div class="col-sm-4">[THIS WILL CONTAIN ALL RESPONSES FROM ALL 3 APIS]
+          <div class="col-sm-4">[THIS WILL CONTAIN ALL RESPONSES FROM Fandango]
               <p id= "fandango">[Fandango DATA] </p>  
           </div>
       </div>
