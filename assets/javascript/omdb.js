@@ -48,3 +48,16 @@ function displayMovieInfo() {
 
             // Displaying the cast 
             movieDiv.append(pFour);
+
+        });
+
+             // This function handles events where a movie button is clicked
+      $("#add-movie").on("click", function(event) {
+        event.preventDefault();
+        // This line grabs the input from the textbox
+        var movie = $("#movie-input").val().trim();
+      });
+
+};
+
+displayMovieInfo();
