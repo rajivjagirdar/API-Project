@@ -22,7 +22,6 @@
         <label for="movie-input"></label>
         <input type="text" id="movie-input">
         <input id="add-movie" type="submit" value="Search Movie">
-
         <br>
       </div>
     </nav>
@@ -36,17 +35,28 @@
 
     <div class="container-fluid">
       <div class="row">
-          <div class="col-sm-8">
-          <div>[THIS WILL CONTAIN ALL RESPONSES FROM oMDB]
-              <p id="omdb">[oMDB DATA]</p>
+          <div class="col-sm-4">[THIS WILL CONTAIN SEARCH HISTORY]
+              <div id=topBox>[TOP 10 BOX OFFICE WILL GO HERE]</div>
+              <div id="usersSearches">[USER'S SEARCHES APPEAR HERE]</div>
           </div>
-          <div class="row">
-          <div>[THIS WILL CONTAIN ALL RESPONSES FROM NYTimes]
-              <p id= "nyTimes">[NYTimes DATA]</p>
-          </div>
-          <div class="row">
-          <div>[THIS WILL CONTAIN ALL RESPONSES FROM Fandango]
-              <p id= "fandango">[Fandango DATA] </p>  
+          <div class="col-sm-8">[THIS WILL CONTAIN ALL RESPONSES FROM ALL 3 APIS]
+              <div id="omdb">[oMDB DATA]
+                <p>tile</p>
+                <p>rating</p>
+                <p>cast</p>
+                <p>release date</p>
+              </div>
+              <div id= "nyTimes">[NYTimes DATA]
+                <p>article title</p>
+                <p>author</p>
+                <p>snip it</p>
+                <p>link</p>
+              </div>
+              <div id= "fandango">[Fandango DATA] 
+                <p>theater</p>
+                <p>showtime</p>
+                <p>[link]</p>
+              </div>  
           </div>
           </div>
       </div>
