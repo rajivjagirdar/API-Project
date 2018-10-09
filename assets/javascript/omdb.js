@@ -2,13 +2,23 @@
 // Create function that will re-render information into HTML Display
 function displayMovieInfo() {
 
-    var movie = $(this).attr("data-name");
-    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+            // Deleting the movie omdb prior to adding new movie buttons
+        // (this is necessary otherwise we will have repeat buttons)
+        $("#omdb").empty();
+
+    // This line grabs the input from the textbox
+    var movie = $("#movie-input").val().trim();
+    var queryURL = "http://www.omdbapi.com/?t=" + movie + "&apikey=45885583";
+
         // Creating an AJAX call for the specific movie button being clicked
         $.ajax({
             url: queryURL,
             method: "GET"
           }).then(function(response) {
+
+// This function handles events where a movie button is clicked
+      $("#add-movie").on("click", function(event) {
+        event.preventDefault();
   
             // Creating a div to hold the movie
             var movieDiv = $("<div class='movie'>");
@@ -51,12 +61,7 @@ function displayMovieInfo() {
 
         });
 
-             // This function handles events where a movie button is clicked
-      $("#add-movie").on("click", function(event) {
-        event.preventDefault();
-        // This line grabs the input from the textbox
-        var movie = $("#movie-input").val().trim();
-      });
+    });
 
 };
 
