@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>[PLACE HOLDER HEADER]</header>
+    </div>
+    <br>
+    <div class="container-fluid">
+        <nav>
+            <div>
+                <form id="movie-form">
+                    <label for="movie-input"></label>
+                    <input type="text" autocomplete="off" id="movie-text">
+                    <input id="add-movie" type="submit" value="Search Movie">
+                    <br>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">[THIS WILL CONTAIN SEARCH HISTORY]
+                <div id=topBox>[TOP 10 BOX OFFICE WILL GO HERE]</div>
+                <div id="usersSearches">[USER'S SEARCHES APPEAR HERE]</div>
+            </div>
+            <div class="col-sm-8">[THIS WILL CONTAIN ALL RESPONSES FROM ALL 3 APIS]
+                <div id="omdb">[oMDB DATA]
+                    <p>tile</p>
+                    <p>rating</p>
+                    <p>cast</p>
+                    <p>release date</p>
+                </div>
+                <div id="nyTimes">[NYTimes DATA]
+                    <p>article title</p>
+                    <p>author</p>
+                    <p>snip it</p>
+                    <p>link</p>
+                </div>
+                <div id="video">[VIDEO DATA]
+                    <iframe id="videoData" width="640" height="360" src = "">
+                    </iframe>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer>&copy; Copyright 2018</footer>
+</body>
+
+</html>
