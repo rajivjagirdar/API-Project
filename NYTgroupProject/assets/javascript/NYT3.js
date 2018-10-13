@@ -30,13 +30,15 @@ $(document).ready(function() {
           console.log(snipit);
 
           var link = result.results[0].link.url;
-          var pLink = $("<p>").text("Link: " + link);
+          var pLink = $("<a>").attr("href", link).append(link);
           console.log(link);
+
+          // var artistURL = $("<a>").attr("href", response.url).append(artistName);
 
           // // Deleting the movie NYTReview display prior to adding new review
           $("#nyTimes").empty();
           // //Displaying all the response variables
-          $("#nyTimes").append(pTitle, pAuthor, pSnipit, pLink)
+          $("#nyTimes").append(pTitle, pAuthor, pSnipit, pLink);
           
         }).fail(function(err) {
           throw err;
