@@ -3,8 +3,8 @@ $(document).ready(function () {
     $('#add-movie').on('click', function (event) {
 
         event.preventDefault();
-        var result = $("#movie-text").val();
-        $('#movie-text').val("");
+        var result = $("#movie-input").val();
+        $('#movie-input').val("");
         console.log(result);
 
         var query = {
