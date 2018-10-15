@@ -1,0 +1,51 @@
+header {
+    z-index: 0;
+    text-align: center;
+    font-size: 500%;
+    border-width: 5px;
+
+}
+
+#topBox {
+    margin-bottom: 50px;
+    margin-right: 50px;
+    height: 55%;
+    width: 85%;
+}
+
+#usersSearches {
+    margin-bottom: 50px;
+    margin-right: 50px;
+    height: 55%;
+    width: 85%;
+
+}
+
+#omdb {
+        margin-bottom: 20px;
+        height: 40%;
+
+}
+
+#nyTimes {
+    margin-bottom: 20px;
+    height: 40%;
+
+}
+
+#fandango {
+    margin-bottom: 20px;
+    height: 40%;
+
+}
+
+/* #microFilm {
+    z-index: 2;
+    position: relative;
+    margin-left: 50px;
+    margin-top: -80px;
+    margin-bottom: 10px;
+    width: 70%;
+    height: 70%;
+
+} */
