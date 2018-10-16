@@ -1,10 +1,39 @@
 $(document).ready(function () {
 
-    $('#add-movie').on('click', function (event) {
+    var popular = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://api.themoviedb.org/3/movie/now_playing?page=1&language=en-US&api_key=acf664aff45e61ffd55c6f2b051e212f",
+        "method": "GET",
+        "headers": {},
+        "data": "{}"
+    }
 
+    $.ajax(popular).done(function (response) {
+        console.log(response);
+        var top = response.results;
+        console.log(top);
+        for (let i = 0; i < 6; i++) {
+          console.log(top[i].original_title);
+          console.log(top[i].poster_path);
+          $('#topBox').append('<p>' + top[i].original_title +'</p>' + '<br>')
+          
+        }
+
+
+        
+    });
+
+    
+
+
+
+    $('#add-movie').on('click', function (event) {
+        // $('#omdb').empty();
+        // $('#nyTimes').empty();
         event.preventDefault();
-        var result = $("#movie-text").val();
-        $('#movie-text').val("");
+        var result = $("#movie-input").val();
+        $('#movie-input').val("");
         console.log(result);
 
         var query = {
