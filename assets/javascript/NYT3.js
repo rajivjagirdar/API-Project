@@ -1,7 +1,9 @@
+
+  var SliceYear = ""
 $(document).ready(function() {
 
     // Create function that will render information into HTML Display
-    function displayMovieInfo (movie) { 
+    function DisplayMovieReview (movie) { 
 
         // Querying the oMDB api for the selected movie
         var url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json";
@@ -33,6 +35,17 @@ $(document).ready(function() {
           var pLink = $("<a>").attr("href", link).append(link);
           console.log(link);
 
+          var year = result.results[0].opening_date;
+          console.log(year);
+
+          //for (var i = 0; i < 4; i++) {
+          //  console.log(year[i]);
+          //}
+
+          console.log(year.slice(0,4))
+          SliceYear = year.slice(0,4)
+
+
           // var artistURL = $("<a>").attr("href", response.url).append(artistName);
 
           // // Deleting the movie NYTReview display prior to adding new review
@@ -53,7 +66,9 @@ $(document).ready(function() {
         var movie = $("#movie-input").val().trim();
     
     //Running the display movie function
-    displayMovieInfo(movie);
+    DisplayMovieReview(movie);
+    displayMovieInfo(movie, SliceYear);
         });
+    
         
 });

@@ -3,42 +3,48 @@ header {
     text-align: center;
     font-size: 500%;
     border-width: 5px;
-
 }
-
 #topBox {
     margin-bottom: 50px;
     margin-right: 50px;
-    height: 55%;
     width: 85%;
+    background-color: azure;
+    border-radius: 20px;
+    padding: 20px;
 }
-
 #usersSearches {
     margin-bottom: 50px;
     margin-right: 50px;
-    height: 55%;
     width: 85%;
-
+    background-color: azure;
+    border-radius: 20px;
 }
-
 #omdb {
         margin-bottom: 20px;
-        height: 40%;
-
+        background-color: azure;
+        border-radius: 20px;
+        padding: 20px;
 }
-
 #nyTimes {
     margin-bottom: 20px;
-    height: 40%;
-
+    background-color: azure;
+    border-radius: 20px;
+    padding: 20px;
 }
-
-#fandango {
+#video {
     margin-bottom: 20px;
-    height: 40%;
-
+    background-color: azure;
+    border-radius: 20px;
+    padding-left: 20px;
+    
 }
-
+p {
+    padding: 10px;
+}
+img {
+    border-style: solid;
+    border-color: black;
+}
 /* #microFilm {
     z-index: 2;
     position: relative;
@@ -47,5 +53,4 @@ header {
     margin-bottom: 10px;
     width: 70%;
     height: 70%;
-
 } */

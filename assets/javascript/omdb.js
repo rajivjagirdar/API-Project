@@ -1,10 +1,9 @@
-$( document ).ready(function() {
 
     // Create function that will render information into HTML Display
-    function displayMovieInfo (movie) { 
+    function displayMovieInfo (movie, SliceYear) { 
 
         // Querying the oMDB api for the selected movie
-        var queryURL = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=45885583&limit=5";
+        var queryURL = "http://www.omdbapi.com/?t=" + movie + "&y=" + SliceYear + "&plot=short&apikey=45885583&limit=5";
 
         // Creating an AJAX call for the specific movie button being clicked
         $.ajax({
@@ -62,9 +61,8 @@ $( document ).ready(function() {
         var movie = $("#movie-input").val().trim();
     
     //Running the display movie function
-    displayMovieInfo(movie);
+    //displayMovieInfo(movie, SliceYear);
         });
         
-});
-
+  
 
