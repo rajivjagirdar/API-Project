@@ -1,5 +1,6 @@
-
-    // Create function that will render information into HTML Display
+var title = "";
+   
+   // Create function that will render information into HTML Display
     function displayMovieInfo (movie, SliceYear) { 
 
         // Querying the oMDB api for the selected movie
@@ -13,7 +14,7 @@
         console.log(response)
 
             // Storing the Title data
-            var title = response.Title;
+             title = response.Title;
             // Creating an element to have the rating displayed
             var pTitle = $("<p>").text("Title: " + title);
  

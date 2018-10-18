@@ -39,7 +39,7 @@ $(document).ready(function () {
         var query = {
             "async": true,
             "crossDomain": true,
-            "url": "https://api.themoviedb.org/3/search/movie?api_key=acf664aff45e61ffd55c6f2b051e212f&query=" + result,
+            "url": "https://api.themoviedb.org/3/search/movie?api_key=acf664aff45e61ffd55c6f2b051e212f&query=" + GlobalTitle,
             "method": "GET",
             "headers": {},
             "data": "{}"

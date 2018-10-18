@@ -1,4 +1,4 @@
-
+  var GlobalTitle = ""
   var SliceYear = ""
 $(document).ready(function() {
 
@@ -18,6 +18,9 @@ $(document).ready(function() {
           url: url,
           method: 'GET',
         }).done(function(result) {
+
+          GlobalTitle = result.results[0].display_title;
+          console.log(result.results[0].display_title);
 
           var title = result.results[0].headline;
           var pTitle = $("<p>").text("Title: " + title);
