@@ -126,7 +126,7 @@ $(document).ready(function () {
       storageBucket: "api-project-40a0b.appspot.com",
       messagingSenderId: "1043881912872"
     };
-firebase.initializeApp(config);
+    firebase.initializeApp(config);
 
     $('#add-movie').on('click', function (event) {
       event.preventDefault(); 
@@ -225,7 +225,6 @@ firebase.initializeApp(config);
                 "headers": {},
                 "data": "{}"
               }
-
               $.ajax(settings).done(function (response) {
                 keymaster = response.results[0].key;
                 console.log(response);
@@ -234,18 +233,18 @@ firebase.initializeApp(config);
               });
             };
           });
+          var database = firebase.database();
+      // Create a push function the movie title inputed in the click listener
+        database.ref("/history/").push(
+          {
+            title: GlobalTitle, 
+            year: SliceYear
+          }
+        )
         }).fail(function (err) {
           throw err;
         });
       });
-      var database = firebase.database();
-      // Create a push function the movie title inputed in the click listener
-        database.ref().push({
-          history: [{
-            title: GlobalTitle, 
-            year: SliceYear
-          }]
-        })
          // clear search bar after click
          $("#movie-input").val("");
     });
