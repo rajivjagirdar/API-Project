@@ -4,46 +4,155 @@ header {
     font-size: 500%;
     border-width: 5px;
 }
+
+input[type=text] {
+    width: 120px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    font-family: 'Inconsolata', monospace;
+}
+
+input[type=text]:focus {
+    width: 10%;
+}
+
+
+#movie-input{
+    border-style: solid;
+    border-radius: 25px;
+    border-width: 5px;
+    color: #222233;
+    background-color: #AACCFF;
+    padding: 5px;
+}
+
+#add-movie{
+    border-radius: 25px;
+    padding: 5px;
+    margin-left: 5px;
+    font-size: 12px;
+    font-family: 'Oswald', sans-serif;
+    color: #AACCFF;
+background-color: #222233;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+}
+      
+placeholder{
+    text-align: center;
+
+}
+    
+
 #topBox {
     margin-bottom: 50px;
     margin-right: 50px;
     width: 85%;
-    background-color: azure;
+    background-color: #222233;
     border-radius: 20px;
     padding: 20px;
+   
 }
 #usersSearches {
     margin-bottom: 50px;
     margin-right: 50px;
     width: 85%;
-    background-color: azure;
+    background-color: #222233;
     border-radius: 20px;
 }
 #omdb {
         margin-bottom: 20px;
-        background-color: azure;
         border-radius: 20px;
         padding: 20px;
+        background-color: #222233;
+
+        
 }
 #nyTimes {
     margin-bottom: 20px;
-    background-color: azure;
+    margin-top: 20px;
+    background-color: #222233;
     border-radius: 20px;
     padding: 20px;
+   
 }
 #video {
     margin-bottom: 20px;
-    background-color: azure;
+    background-color: #222233;
     border-radius: 20px;
-    padding-left: 20px;
-    
+    padding: 20px;    
 }
+
+
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+
 p {
+    padding: 10px;
+    font-family: 'Inconsolata', monospace;
+    color: #AACCFF;
+}
+
+
+
+h1{
+    font-family: 'Oswald', sans-serif;
+    color: #222233;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #AACCFF;
+    border-style: solid;
+    padding: 10px;
+    margin-right: 15px;
+    margin-left: -30px;
+    border-radius: 25px;
+}
+
+h2{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    padding-left: 25px;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    box-sizing: border-box;
+    background-color: #AACCFF;
+    border-style: solid;
+    padding: 10px;
+    margin-right: 60%;
+    margin-left: 20px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+
+h3{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    padding-left: 25px;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #AACCFF;
+    border-style: solid;
+    padding: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 25px;
+    text-align: center;
+}
+
+a{
     padding: 10px;
 }
 img {
     border-style: solid;
     border-color: black;
+    border-width: 2px;
 }
 /* #microFilm {
     z-index: 2;
