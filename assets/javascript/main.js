@@ -12,15 +12,14 @@ $(document).ready(function () {
   }
 
   $.ajax(popular).done(function (response) {
-    console.log(response);
+    // console.log(response);
     var top = response.results;
     var topmovie = top[0].original_title
-    console.log(top);
+    // console.log(top);
     for (let i = 0; i < 6; i++) {
-      console.log(top[i].original_title);
-      console.log(top[i].poster_path);
-      var topMoviesList = $('#topBox').append('<p>' + top[i].original_title + '</p>' + '<br>')
-      $("#topBox").attr("href", topMoviesList).append(topMoviesList);
+      // console.log(top[i].original_title);
+      // console.log(top[i].poster_path);
+      $('#topBox').append('<p>' + top[i].original_title + '</p>' + '<br>')
 
     };
     var url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json";
@@ -57,7 +56,7 @@ $(document).ready(function () {
         url: queryURL,
         method: "GET"
       }).then(function (response) {
-        console.log(response)
+        // console.log(response)
 
         var title = response.Title;
         var pTitle = $("<p>").text("Title: " + title);
@@ -94,8 +93,8 @@ $(document).ready(function () {
             alert("I think you spelled the movie wrong :( ")
           }
           else {
-            console.log(res);
-            console.log(res.results[0].id);
+            // console.log(res);
+            // console.log(res.results[0].id);
 
             var eyeD = res.results[0].id;
 
@@ -110,8 +109,8 @@ $(document).ready(function () {
 
             $.ajax(settings).done(function (response) {
               keymaster = response.results[0].key;
-              console.log(response);
-              console.log(keymaster);
+              // console.log(response);
+              // console.log(keymaster);
               $('#videoData').attr('src', "https://www.youtube.com/embed/" + keymaster);
             });
           };
@@ -129,6 +128,7 @@ $(document).ready(function () {
     };
     firebase.initializeApp(config);
 
+
     $('#add-movie').on('click', function (event) {
       event.preventDefault(); 
       var movie = $("#movie-input").val().trim();
@@ -144,26 +144,26 @@ $(document).ready(function () {
       }).done(function (result) {
 
         GlobalTitle = result.results[0].display_title;
-        console.log(result.results[0].display_title);
+        // console.log(result.results[0].display_title);
 
         var headline = result.results[0].headline;
         var pHeadline = $("<p>").text("Title: " + headline);
-        console.log(headline);
+        // console.log(headline);
 
         var author = result.results[0].byline;
         var pAuthor = $("<p>").text("Author: " + author);
-        console.log(author);
+        // console.log(author);
 
         var snipit = result.results[0].summary_short;
         var pSnipit = $("<p>").text("Snip It: " + snipit);
-        console.log(snipit);
+        // console.log(snipit);
 
         var link = result.results[0].link.url;
         var pLink = $("<a>").attr("href", link).append(link);
-        console.log(link);
+        // console.log(link);
 
         var year = result.results[0].opening_date;
-        console.log(year);
+        // console.log(year);
 
         // console.log(year.slice(0, 4))
         SliceYear = year.slice(0, 4)
@@ -176,7 +176,7 @@ $(document).ready(function () {
           url: queryURL,
           method: "GET"
         }).then(function (response) {
-          console.log(response)
+          // console.log(response)
 
           var title = response.Title;
           var pTitle = $("<p>").text("Title: " + title);
@@ -213,8 +213,8 @@ $(document).ready(function () {
               alert("I think you spelled the movie wrong :( ")
             }
             else {
-              console.log(res);
-              console.log(res.results[0].id);
+              // console.log(res);
+              // console.log(res.results[0].id);
 
               var eyeD = res.results[0].id;
 
@@ -228,8 +228,8 @@ $(document).ready(function () {
               }
               $.ajax(settings).done(function (response) {
                 keymaster = response.results[0].key;
-                console.log(response);
-                console.log(keymaster);
+                // console.log(response);
+                // console.log(keymaster);
                 $('#videoData').attr('src', "https://www.youtube.com/embed/" + keymaster);
               });
             };
@@ -242,6 +242,23 @@ $(document).ready(function () {
             year: SliceYear
           }
         )
+        // SEARCH HISTORY CODE STARTS HERE
+        var database = firebase.database();
+        database.ref().on ("child_added", function(childSnapshot){
+          console.log(childSnapshot.val());
+        for(var i =1; i < 4; i++){
+          var omdbAjax = "https://api.themoviedb.org/3/search/movie?api_key=acf664aff45e61ffd55c6f2b051e212f&query=" + GlobalTitle + i;
+        $("#main").append(
+          $("<button>")
+          .attr("GlobalTitle", omdbAjax)
+          .text( "title" + i) 
+        )
+      };
+      });
+      $("button").on("click", (event) => {
+        console.log("The ajax url for omdb api is: " + $(event.target).attr("omdb-ajax"));
+      });  
+      // SEARCH HISTORY CODE ENDS HERE
         }).fail(function (err) {
           throw err;
         });
