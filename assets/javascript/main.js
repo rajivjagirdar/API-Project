@@ -157,6 +157,7 @@ $('#add-movie').on('click', function (event) {
         var year = result.results[0].opening_date;
         console.log(year);
 
+        
         console.log(year.slice(0,4))
         SliceYear = year.slice(0,4)
 
