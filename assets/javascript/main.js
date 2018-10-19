@@ -246,18 +246,10 @@ $(document).ready(function () {
         var database = firebase.database();
         database.ref().on ("child_added", function(childSnapshot){
           console.log(childSnapshot.val());
-        for(var i =1; i < 4; i++){
-          var omdbAjax = "https://api.themoviedb.org/3/search/movie?api_key=acf664aff45e61ffd55c6f2b051e212f&query=" + GlobalTitle + i;
-        $("#main").append(
-          $("<button>")
-          .attr("GlobalTitle", omdbAjax)
-          .text( "title" + i) 
-        )
-      };
+          $("#usersSearches").append('<p>' + GlobalTitle + '</p>' + '<br>');
+        
       });
-      $("button").on("click", (event) => {
-        console.log("The ajax url for omdb api is: " + $(event.target).attr("omdb-ajax"));
-      });  
+
       // SEARCH HISTORY CODE ENDS HERE
         }).fail(function (err) {
           throw err;
