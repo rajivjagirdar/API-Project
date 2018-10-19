@@ -8,22 +8,16 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+ 
 </head>
 <body background="assets/images/62347.jpg"> 
-  <div class="container-fluid">
-      <div>
-   
-    <!-- <img src="assets/images/MicrofilmFilmLogo.png" id="microFilm"> -->
-    
-    </div>
-    
-  </div>
+ 
   <br>
   <div class="container-fluid" body back>
     <nav>
       <div>
         <form id="movie-form">
-        <label for="movie-input"></label>
         <input type="text" autocomplete="off" id="movie-input">
         <input id="add-movie" type="submit" value="Search Movie">
         <br>
@@ -35,32 +29,38 @@
     <div class="container" >
         
       <div class="row">
-          <div class="col-sm-4 border border-dark">[THIS WILL CONTAIN SEARCH HISTORY]
+          <div class="col-sm-4 ">
+              <h1>Trending Searches</h1>
           <br>
-          <div id="topBox" class="border">[TOP 10 BOX OFFICE WILL GO HERE]
+          <div id="topBox" class="border">
           </div>
           <div id="usersSearches" class="border">[USER'S SEARCHES APPEAR HERE]
           </div>
           <div id="main"></div>
           </div>
-          <div class="col-sm-8 border border-dark">[THIS WILL CONTAIN ALL RESPONSES FROM ALL 3 APIS]
+          <div class="col-sm-8 ">
+            <h2>Movie Details</h2>
           <br>
         
             
           <div class="container">
-            <div class="border" id= "omdb">[oMDB DATA]
+            <div class="border" id= "omdb">
+              <h1>[oMDB DATA]</h1>
               <p>tile</p>
               <p>rating</p>
               <p>cast</p>
               <p>release date</p>
             </div>
+            <h3>A Review, New York Times</h3>
               <div class="border" id= "nyTimes">[NYTimes DATA]
                 <p>article title</p>
                 <p>author</p>
                 <p>snip it</p>
                 <p>link</p>
               </div>
-              <div id="video">[VIDEO DATA]
+              <h3>Check Out the Trailer!</h3>;
+
+              <div id="video">
                 <iframe id="videoData" width="660" height="360" src="">
                 </iframe>
           </div>
