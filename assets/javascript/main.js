@@ -51,7 +51,7 @@ $(document).ready(function () {
       $("#nyTimes").empty();
       $("#nyTimes").append(pHeadline, pAuthor, pSnipit, pLink);
 
-      var queryURL = "https://www.omdbapi.com/?t=" + topmovie + "&y=" + SliceYear + "&plot=short&apikey=45885583&limit=5";
+      var queryURL = "https://www.omdbapi.com/?t=" + topmovie + "&y=" + SliceYear + "&plot=short&apikey=45885583";
       $.ajax({
         url: queryURL,
         method: "GET"
